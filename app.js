@@ -1,14 +1,30 @@
-const inquirer = require('inquirer');
+// const inquirer = require('inquirer');
+const Word = require('./word.js'); // Require Word constructor 
+const Letter = require('./letter.js');  // Require Letter constructor
 
+// This is the magic!!!!
+// An array of instances of the Letter constructor
+// Holds each instance of Letter, the value propertie of each instance is the letter to be guessed
+let display_arr = [];
 
-// animals.js file with lots of animals in an array
-// Word constructor 
-    // properties: word (from the animals.js), word as an array, length, guesses remaining (10)
-// Letter constructor 
+const word = new Word; // Get a word to play
+
+// Create as many instances of the Letter constructor as there are letters in the word
+for(let i = 0; i < word.word_length; i++) {
+    let each_letter = new Letter(word.word_arr, i); // Pass the array that holds each letter of the word, and the index
+    display_arr.push(each_letter);  // Push each instance of Letter into an array
+}
+
+console.log(display_arr);
+
+// console.log(letter);
+// *Word constructor 
+    // *properties: word (from the animals.js), word as an array, length, guesses remaining (10)
+// *Letter constructor 
     // properties: 
-        // value (actual letter, required from the word_arr in Word constructor), 
-        // hidden: _
-        // guessed (boolean)
+        // *value (actual letter, required from the word_arr in Word constructor), 
+        // *hidden: _
+        // *guessed (boolean)
 // Create 1 array (display_arr), each entry is a letter generated with the Letter constructor
     // Create an instance of Word constructor
     // In a loop: create as many instances of the Letter constructor as there are letters in the word

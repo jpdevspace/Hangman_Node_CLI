@@ -1,0 +1,30 @@
+const animals = [ 
+    "ladybug", 
+    "grasshopper", 
+    "lion", 
+    "tiger", 
+    "panther", 
+    "leopard", 
+    "squirrel", 
+    "racoon", 
+    "panda", 
+    "frog", 
+    "swordfish", 
+    "butterfly", 
+    "ant", 
+    "whale", 
+    "armadillo", 
+    "dog", 
+    "fish", 
+    "horse", 
+    "snake", 
+    "otter", 
+    "spider", 
+    "bear", 
+    "cat", 
+    "lizard", 
+    "alligator", 
+    "eagle" 
+];
+
+module.exports = animals
