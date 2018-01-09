@@ -1,0 +1,27 @@
+{
+  "name": "hangman_node_cli",
+  "version": "1.0.0",
+  "description": "Hangman command-line game using object constructors",
+  "main": "app.js",
+  "scripts": {
+    "test": "test this"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpdevspace/Hangman_Node_CLI.git"
+  },
+  "keywords": [
+    "Node",
+    "CLI",
+    "Hangman"
+  ],
+  "author": "Jean Paul Giraldo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jpdevspace/Hangman_Node_CLI/issues"
+  },
+  "homepage": "https://github.com/jpdevspace/Hangman_Node_CLI#readme",
+  "dependencies": {
+    "requirer": "0.0.4"
+  }
+}
