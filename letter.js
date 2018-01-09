@@ -1,5 +1,3 @@
-const Word = require('./word.js'); // Require Word constructor 
-
 /*
     When a new instance of the Letter constructor is created
     it will use the index (that passed to it) 
