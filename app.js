@@ -1,4 +1,5 @@
 const inquirer = require('inquirer');
+const chalk = require('chalk');
 const Word = require('./word.js'); // Require Word constructor 
 const Letter = require('./letter.js');  // Require Letter constructor
 
@@ -39,7 +40,7 @@ const play_now = () => {
     if (display_arr.join() == word.word_arr.join()) {
         did_I_just_win = true;
     }
-    console.log(`The Word is: ${word.word}`); // Debugging: Word to be guessed
+    console.log(`\nThe Word is: ${word.word}`); // Debugging: Word to be guessed
 
 
     if (word.guess > 0 && !did_I_just_win) { // User still has guesses remaining
@@ -57,15 +58,16 @@ const play_now = () => {
         ]).then(answer => {
             // User guessed wrong: letter typed NOT in the array
             if (word.word_arr.indexOf(answer.user_guess) < 0 ) {
-                console.log("Wrong\n");   // Alert the user
+                console.log("\n" + chalk.red("Wrong\n"));   // Alert the user
                 word.guess--;   // Decrease guesses
-                console.log(`Guesses reamining: ${word.guess}\n`);
+                console.log(chalk.bgBlue(`Guesses reamining: ${word.guess}`));
+                console.log("\n"); // Extra space
                 
                 play_now();           
             } 
             //  User guessed right: letter typed IS in the array
             else {
-                console.log("Right");   // Alert the user
+                console.log("\n" + chalk.green("Right"));   // Alert the user
 
                 for (let i = 0; i < word.word_length; i++) {   // Look for the typed word in the array of Letter instances and change the property value
                     if (word.word_arr[i] == answer.user_guess) {
@@ -79,10 +81,10 @@ const play_now = () => {
         });
     }
     else if(word.guess > 0 && did_I_just_win){
-        console.log("\nCongratulations\nYou Won!");
+        console.log("\n" + chalk.bgYellow("Congratulations: You Won!"));
     }
     else {
-        console.log("\nGame Over\nYou Lose!");
+        console.log("\n" + chalk.bgRed("Game Over: You Lose!"));
     }
         
 }

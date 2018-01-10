@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/jpdevspace/Hangman_Node_CLI#readme",
   "dependencies": {
+    "chalk": "^2.3.0",
     "inquirer": "^5.0.0"
   }
 }
