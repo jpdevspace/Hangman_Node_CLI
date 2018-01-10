@@ -24,4 +24,4 @@ node app.js
 
 ## Instructions
 
-In the Node command line you'll be prompted for a letter to try to guess the word. You have 10 tries. 
+Guess the animal. In the Node command line you'll be prompted for a letter to try to guess the word. You have 10 tries. 
