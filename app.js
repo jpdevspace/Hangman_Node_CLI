@@ -29,10 +29,6 @@ const gen_display_arr = () => {
     }
 }
 
-
-// Debugging
-//console.log(display_arr);
-
 const play_now = () => {
     gen_display_arr();  // Generate an array with the corresponding dashes/letters
     let did_I_just_win = false;
@@ -40,7 +36,7 @@ const play_now = () => {
     if (display_arr.join() == word.word_arr.join()) {
         did_I_just_win = true;
     }
-    console.log(`\nThe Word is: ${word.word}`); // Debugging: Word to be guessed
+    //console.log(`\nThe Word is: ${word.word}`); // Debugging: Word to be guessed
 
 
     if (word.guess > 0 && !did_I_just_win) { // User still has guesses remaining
